@@ -1,0 +1,113 @@
+//---------------------------------------------------------//
+// Search Results
+//---------------------------------------------------------// 
+
+
+.result-text {
+	color: #868ca0;
+}
+
+
+
+
+// Filter
+
+.filter {
+	text-align: center;
+	font-size: 0;
+	margin-top: rem(-20);
+	margin-bottom: rem(30);
+	.filter-col {
+		font-size: $font-size-base;
+		display: block;
+		margin-bottom: rem(16);
+	}
+	.filter-icon {
+		width: rem(50);
+		border-right: 1px solid $gray-lighter;
+		position: absolute;
+		line-height: rem(43);
+		top: rem(1);
+		left: 0;
+		text-align: center;
+		.icon-image {
+			position: relative;
+			left: rem(2);
+			opacity: 0.55;
+		}
+	}
+	@include breakpoint(sm) {
+		margin-left: rem(-16);
+		margin-right: rem(-16);
+		.filter-col {
+			display: inline-block;
+			vertical-align: top;
+			margin-right: rem(8);
+			margin-left: rem(8);
+		}
+	}
+}
+
+
+.dd-select {
+	text-align: left;
+	.dd-select-text {
+		@extend .form-control;
+		box-shadow: 0 2px 4px rgba(#000000, 0.04);
+		padding-right: rem(40);
+		padding-left: rem(62);
+		padding-top: rem(13);
+		padding-bottom: rem(11);
+		height: rem(45);
+		border-radius: 0;
+		border: none;
+		color: #868ca0;
+		cursor: pointer;
+		-webkit-transition: box-shadow 0.2s $easing;
+		transition: box-shadow 0.2s $easing;
+		border: 1px solid transparent;
+		&:before {
+	        content: '';
+	        border-left: 5px solid transparent;
+	        border-right: 5px solid transparent;
+	        border-top: 5px solid #868ca0;
+	        display: block;
+	        position: absolute;
+	        top: 50%;
+	        right: rem(18);
+	        margin-top: rem(-2);
+	    }
+	    &.active {
+	    	border-color: $brand-primary;
+	    	box-shadow: 0 0 10px rgba($brand-primary, 0.5);
+	    }
+	}
+	.dd-list {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background-color: #ffffff;
+		color: #868ca0;
+		display: none;
+		z-index: 9999;
+		overflow: auto;
+		box-shadow: 0 2px 4px rgba(#000000, 0.1);
+	}
+	.dd-list-content {
+		@extend .nav;
+		margin-bottom: 0;
+		li {
+			padding: rem(12 20);
+			cursor: pointer;
+			margin-bottom: 0;
+			&:hover {
+				background-color: $brand-primary;
+				color: #ffffff;
+			}
+		}
+	}
+	@include breakpoint(sm) {
+
+	}
+}

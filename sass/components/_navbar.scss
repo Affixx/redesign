@@ -1,0 +1,293 @@
+//---------------------------------------------------------//
+// Navbar
+//---------------------------------------------------------// 
+
+
+.header, .main, .footer, .menu-backdrop {
+	@include breakpoint(xs-only) {
+		-webkit-transition: transform 0.25s cubic-bezier(1.000, 0.000, 0.000, 1.000);
+		transition: transform 0.25s cubic-bezier(1.000, 0.000, 0.000, 1.000);
+	}
+}
+
+.menu-open {
+	@include breakpoint(xs-only) {
+		.navbar-collapse {
+			opacity: 1;
+			display: block;
+		}
+		.header, .main, .footer, .menu-backdrop {
+			-webkit-transform: translateX(-280px);
+			transform: translateX(-280px);
+		}
+	}
+}
+
+
+
+.navbar {
+	padding: rem(10 20);
+	color: $gray-darker;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #ffffff;
+	@include clearfix();
+
+	@include breakpoint(sm) {
+		padding: rem(20);
+	}
+}
+
+.navbar-left, .navbar-right {
+	position: relative;
+	z-index: 2;
+}
+
+.navbar-left {
+	float: left;
+}
+
+.navbar-right {
+	float: right;
+}
+
+.navbar-brand {
+	background: url('#{$img-url}/affixx-logo.png') 0 0 no-repeat;
+	@include background-retina(109, 26);
+	margin-right: rem(8);
+	display: block;
+	margin-bottom: rem(8);
+	@include breakpoint(sm) {
+		@include background-retina(119, 28);
+		display: block;
+	}
+	@include breakpoint(lg) {
+		
+	}
+	@include breakpoint(xlg) {
+		margin-left: rem(20);
+		float: left;
+	}
+}
+
+.tagline {
+	color: $gray-darker;
+	font-size: rem(11);
+	width: rem(160);
+	line-height: 1.2;
+	margin-bottom: rem(10);
+	@include breakpoint(sm) {
+		font-size: rem(14);
+		margin-bottom: 0;
+		width: rem(200);
+	}
+	@include breakpoint(md) {
+		
+	}
+	@include breakpoint(lg) {
+	}
+	@include breakpoint(xlg) {
+		margin-top: rem(10);
+		float: left;
+		display: block;
+		width: auto;
+	}
+}
+
+
+
+// Account Info
+
+.account-info {
+	border-right: 1px solid #e7e7e7;
+	padding-right: rem(20);
+	margin-right: rem(10);
+	float: left;
+	position: relative;
+	@include breakpoint(sm) {
+		border-right: none;
+		padding-right: 0;
+		margin-right: 0;
+		margin-top: rem(-8);
+		padding-bottom: rem(20);
+	}
+}
+
+.account-pic {
+	width: rem(40);
+	height: rem(40);
+	background-color: #f2f2f2;
+	border-radius: 50%;
+	overflow: hidden;
+	padding: rem(2);
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: rem(7);
+	img {
+		width: 100%;
+		display: block;
+		border-radius: 50%;
+	}
+	@include breakpoint(sm) {
+		width: rem(45);
+		height: rem(45);
+		padding: rem(4);
+	}
+}
+
+.account-name {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: rem(14);
+	color: $gray-darker;
+	display: none;
+	@include breakpoint(sm) {
+		display: inline-block;
+	}
+}
+
+
+
+
+
+
+
+// Navbar Collapse
+
+.navbar-collapse {
+	overflow-x: visible;
+	box-shadow: inset 0 1px 0 rgba(255,255,255, 1);
+	border-top: 1px solid $gray-light;
+	@include clearfix();
+	-webkit-overflow-scrolling: touch;
+	clear: both;
+	background-color: rgba(#ffffff, 1);
+	&.in {
+		overflow-y: auto;
+	}
+	@include breakpoint(xs-only) {
+		position: fixed;
+		width: rem(280);
+		height: 100%;
+		right: 0;
+		top: 0;
+		-webkit-transform: translateX(280px);
+		transform: translateX(280px);
+		-webkit-transition: transform 0.25s cubic-bezier(1.000, 0.000, 0.000, 1.000), opacity 0.25s linear;
+		transition: transform 0.25s cubic-bezier(1.000, 0.000, 0.000, 1.000), opacity 0.25s linear;
+		padding: rem(0 ($grid-gutter-width / 2));
+		padding-top: rem(48);
+		z-index: 2;
+		opacity: 0;
+		display: none;
+		.navbar-nav {
+			margin-top: 20px;
+		}
+	} 
+	@include breakpoint(sm) {
+		width: auto;
+	    border-top: 0;
+	    box-shadow: none;
+	    text-align: left;
+	    clear: none;
+	    background: none;
+	    margin: 0;
+	    &.collapse {
+	      display: block !important;
+	      height: auto !important;
+	      padding-bottom: 0; 
+	      overflow: visible !important;
+	    }
+	    &.in {
+	      overflow-y: visible;
+	    }
+	}
+	
+}
+
+
+
+
+.navbar-toggle {
+	padding: 10px;
+	float: right;
+	margin-right: -10px;
+	margin-top: 0px;
+	width: 45px;
+    height: 39px;
+    position: relative;
+    &.toggle-close {
+		position: absolute;
+		right: rem(10);
+		top: rem(10);
+		margin-right: 0;
+	}
+	@include breakpoint(sm) {
+		display: none;
+	}
+}
+
+
+.navbar-toggle .icon-bar {
+    width: 25px;
+    height: 3px;
+    border-radius: 0;
+    background-color: $brand-primary;
+    display: block;
+    position: absolute;
+}
+
+.navbar-toggle .icon-bar:first-child {
+    top: 18px;
+    -webkit-transition: transform 0.25s ease-in-out, top 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out, top 0.25s ease-in-out;
+    transform: rotate(45deg);
+}
+
+.navbar-toggle .icon-bar:nth-child(2) {
+    top: 18px;
+    opacity: 0;
+    -webkit-transition: opacity 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.navbar-toggle .icon-bar:last-child {
+    top: 18px;
+    -webkit-transition: transform 0.25s ease-in-out, top 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out, top 0.25s ease-in-out;
+    transform: rotate(-45deg);
+}
+
+.navbar-toggle.collapsed .icon-bar:first-child {
+    transform: none;
+    top: 10px;
+}
+
+.navbar-toggle.collapsed .icon-bar:nth-child(2) {
+    top: 18px;
+    opacity: 1;
+}
+
+.navbar-toggle.collapsed .icon-bar:last-child {
+    top: 26px;
+    transform: none;
+}
+
+
+
+
+.menu-backdrop {
+	background-color: rgba(#000000, 0.4);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 91;
+	@include breakpoint(sm) {
+		display: none !important;
+	}
+}

@@ -1,0 +1,191 @@
+//---------------------------------------------------------//
+// Main
+//---------------------------------------------------------// 
+
+
+.main-top {
+	background-color: #ffffff;
+	padding-top: rem(100);
+	padding-bottom: rem(45);
+	@include breakpoint(sm) {
+		min-height: rem(475);
+		padding: rem(150 0 60 0);
+	}
+}
+
+
+.main-content {
+	background-color: $gray-lighter;
+	padding: rem(50 0);
+	.profile-details {
+		padding-top: rem(30);
+	}
+	@include breakpoint(sm) {
+		padding: rem(50 0);
+	}
+}
+
+
+
+.main-top-intro {
+	text-align: center;
+	h1 {
+		font-size: rem(27);
+		margin-bottom: rem(10);
+	}
+	p {
+		margin-bottom: rem(20);
+	}
+	.label-title {
+		text-indent: 15px;
+	}
+	@include breakpoint(sm) {
+		h1 {
+			font-size: rem(40);
+			margin-bottom: rem(25);
+		}
+		p {
+			margin-bottom: rem(30);
+		}
+	}
+	@include breakpoint(md) {
+		h1 {
+			font-size: rem(54);
+		}
+	}
+}
+
+
+
+
+.primary-search {
+	max-width: 856px;
+	margin: 0 auto;
+	box-shadow: 0 10px 25px rgba(#000000, 0.19);
+	border-radius: $border-radius-large;
+	.form-control {
+		border-color: transparent;
+		padding: rem(11 20);
+		height: rem(45);
+		font-size: rem(14);
+		&:focus {
+			border-color: $input-border-focus;
+		}
+	}
+	.btn {
+		padding: rem(11 20);
+		font-size: rem(14);
+	}
+	@include breakpoint(sm) {
+		box-shadow: 0 20px 50px rgba(#000000, 0.19);
+		.btn {
+			padding: rem(24 34);
+			border-radius: 40px;
+			line-height: 1.5;
+			font-size: 16px;
+		}
+		.form-control {
+			padding: rem(11 34);
+			height: rem(74);
+			font-size: rem(16);
+		}
+	}
+}
+
+
+
+
+// UPload
+
+.upload-content {
+	text-align: left;
+}
+
+.drag-drop {
+	border: 1px dashed $input-border;
+	min-height: rem(236);
+	padding-top: rem(60);
+	padding-bottom: rem(30);
+	text-align: center;
+	color: #9ba6b4;
+	margin-bottom: rem(30);
+	margin-top: rem(20);
+	p {
+		margin-bottom: rem(5);
+		line-height: 1.2;
+	}
+	.h3 {
+		font-size: rem(24);
+		text-transform: uppercase;
+		color: #9ba6b4;
+	}
+}
+
+
+
+
+
+
+// Block
+
+.block {
+	display: block;
+	margin-bottom: rem(40);
+	@include breakpoint(sm) {
+		margin-bottom: rem(60);
+	}
+}
+.block-header {
+	text-align: center;
+	border-bottom: 1px solid $border-color;
+	padding-bottom: rem(25);
+	margin-bottom: rem(45);
+	width: 100%;
+	@include clearfix();
+	.icon-image {
+		position: relative;
+		top: rem(-2);
+	}
+	h1, h2, h3, h4, h5, h6, p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+}
+.block-header-left, .block-header-right {
+	
+		// display: table-cell;
+		// vertical-align: bottom;
+
+}
+.block-header-left {
+	text-align: left;
+	float: left;
+	margin-top: rem(7);
+	@include breakpoint(sm) {
+		margin-top: 0;
+	}
+}
+.block-header-right {
+	text-align: right;
+	float: right;
+	margin-top: rem(13);
+	@include breakpoint(sm) {
+		padding-top: 0;
+
+	}
+}
+
+
+
+
+
+// PDF
+
+.pdf-module {
+	margin-bottom: rem(30);
+	img {
+		max-width: 100%;
+	}
+}

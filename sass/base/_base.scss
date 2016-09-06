@@ -1,0 +1,27 @@
+//---------------------------------------------------------//
+// LAYOUT
+//---------------------------------------------------------// 
+// - base structure layouts 
+// - override bootstrap layouts
+//---------------------------------------------------------//
+
+* {
+	outline: none;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-size: rem($font-size-base);
+}
+
+
+
+.container {
+    @include breakpoint(lg) {
+    	width: auto;
+    	max-width: rem(1640);
+    }
+}

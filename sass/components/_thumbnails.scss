@@ -1,0 +1,31 @@
+//---------------------------------------------------------//
+// Thumbnails
+//---------------------------------------------------------// 
+
+
+.thumbnail {
+	margin-bottom: rem($grid-gutter-width / 2);
+	position: relative;
+	color: #777777;
+	max-width: rem(400);
+	margin-left: auto;
+	margin-right: auto;
+	@include clearfix();
+	.thumbnail-icon {
+		text-align: center;
+		margin-bottom: rem(30);
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.icon-image, .icon {
+			margin: 0 auto;
+		}
+	}
+	@include breakpoint(sm) {
+		margin-bottom: rem($grid-gutter-width);
+		.thumbnail-icon {
+			line-height: rem(160);
+			margin-bottom: rem(10);
+		}
+	}
+}

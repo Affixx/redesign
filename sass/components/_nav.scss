@@ -1,0 +1,90 @@
+//---------------------------------------------------------//
+// Navigation
+//---------------------------------------------------------// 
+// - All Menus
+//---------------------------------------------------------//
+
+
+.nav {
+	list-style: none;
+	padding: 0;
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	li {
+		margin-bottom: 0;
+	}
+}
+
+
+
+
+// Navbar nav
+
+.navbar-nav {
+	margin-bottom: 0;
+	a {
+		display: block;
+	}
+	li {
+		margin-bottom: rem(10);
+	}
+	@include breakpoint(sm) {
+		float: right;
+		li {
+			float: left;
+			margin-right: rem(10);
+			margin-bottom: 0;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	&.nav-menu {
+		font-size: 0;
+		text-transform: uppercase;
+		color: #000000;
+		font-weight: 900;
+		li {
+			font-size: rem(14);
+			margin-left: rem(0);
+			margin-right: rem(0);
+			display: inline-block;
+			vertical-align: middle;
+			float: none;
+		}
+		a {
+			color: #000000;
+			letter-spacing: 1px;
+			padding: rem(10 10);
+			&:hover, &:focus {
+				text-decoration: none;
+				color: $brand-primary;
+				//opacity: 0.5;
+			}
+		}
+		@include breakpoint(sm) {
+			position: absolute;
+			top: rem(15);
+			left: 0;
+			width: 100%;
+			text-align: center;
+		}
+		@include breakpoint(md) {
+			top: rem(18);
+			li {
+				margin-left: rem(22);
+				margin-right: rem(22);
+			}
+		}
+		@include breakpoint(lg) {
+			li {
+				margin-left: rem(25);
+				margin-right: rem(25);
+			}
+		}
+	}
+}
+
+
+

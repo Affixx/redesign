@@ -1,0 +1,151 @@
+//---------------------------------------------------------//
+// Override Boostrap Variables
+//---------------------------------------------------------//
+
+
+
+// Colors
+
+$gray-base:              #000;
+$gray-darker:            #121315; // Heading Color
+$gray-dark:              #444549;
+$gray:                   #656565; 
+$gray-light:             #ccd0d6; 
+$gray-lighter:           #f2f2f2; 
+
+
+
+
+$brand-primary:         #2ea1f9; 
+$brand-success:         #73c8ad;
+$brand-info:            #8467f1; // #c9a7e2;
+$brand-warning:         #ffc107;
+$brand-danger:          #e67b85;
+
+
+
+
+$state-success-text:             $brand-success;
+$state-info-text:                $brand-info;
+$state-warning-text:             $brand-warning;
+$state-danger-text:              $brand-danger;
+
+
+
+// Typography
+
+$font-family-sans-serif:  "proxima_nova", Helvetica, Arial, sans-serif;
+$font-family-serif:       'Georgia', "Times New Roman", Times, serif;
+
+$font-size-base:          14px;
+$font-size-large:         16px;
+$font-size-small:         12px;
+
+
+$text-color:			  $gray-darker;
+
+$headings-color:          $gray-darker;
+$headings-font-weight:    900;
+
+$headings-small-color:        $gray-darker;
+
+
+// Components
+
+$line-height-base:        	1.5714; 
+$line-height-large:         1.5; 
+$line-height-small:         1.428571429;
+
+$border-radius-base:        30px;
+$border-radius-large:       40px;
+$border-radius-small:       20px;
+
+
+
+$padding-base-vertical:     9px;
+$padding-base-horizontal:   18px;
+
+$padding-large-vertical:    14px;
+$padding-large-horizontal:  25px;
+
+$padding-small-vertical:    6px;
+$padding-small-horizontal:  20px;
+
+$padding-xs-vertical:       1px;
+$padding-xs-horizontal:     5px;
+
+
+
+
+// BUttons
+
+$btn-font-weight:				bold;
+
+$btn-primary-color:              #fff;
+$btn-primary-bg:                 $brand-primary;
+$btn-primary-border:             $brand-primary;
+
+$btn-info-color:              	#fff;
+$btn-info-bg:                 	#8467f1;
+$btn-info-border:             	#8467f1;
+
+
+
+
+
+// INput
+
+$input-color: 					 $gray-darker;
+$input-color-placeholder:        #b7b7b7;
+$input-border-focus:             $brand-primary;
+$input-border:					 #d0d0d0;
+
+
+
+
+// Grid
+
+$grid-gutter-width:         40px;
+
+
+
+// Container
+
+
+$container-tablet:             (700px + $grid-gutter-width);
+$container-sm:                 $container-tablet;
+
+$container-desktop:            (935px + $grid-gutter-width);
+$container-md:                 $container-desktop;
+
+$container-large-desktop:      (1140px + $grid-gutter-width);
+$container-lg:                 $container-large-desktop;
+
+
+
+// Breakpoint
+
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+$screen-xlg:                  1500px !default;
+$screen-xlg-min:              $screen-xlg !default;
+$screen-xlg-desktop:          $screen-xlg-min !default;
+
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+$screen-lg-max:				 ($screen-xlg-min - 1) !default;

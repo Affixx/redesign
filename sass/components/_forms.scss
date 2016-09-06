@@ -1,0 +1,235 @@
+//---------------------------------------------------------//
+// Forms
+//---------------------------------------------------------// 
+
+
+.form-control {
+	box-shadow: none;
+    font-size: rem(13);
+	@include breakpoint(xs-only) {
+		&.input-lg {
+			padding: rem(11 20);
+			height: rem(45);
+			font-size: rem(14);
+		}
+	}
+}
+
+
+label {
+    font-size: rem(12);
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+
+.form-group {
+    display: block;
+    margin-bottom: rem(15);
+    position: relative;
+    @include clearfix();
+    label {
+        padding-left: rem($padding-base-horizontal);
+    }
+}
+
+
+.form-btn {
+    @include clearfix();
+    padding-top: rem(7);
+}
+
+
+
+// Error
+
+.has-error {
+    .form-control {
+        background: url('#{$icon-url}/icon-warning.png') 94% 50% no-repeat #fef3f4;
+        background-size: 18px 17px;
+    }
+    .form-tooltip {
+        background-color: #eb5160;
+        &:before {
+            border-right-color: #eb5160;
+        }
+    }
+}
+
+
+// Success
+
+.has-success {
+    .form-control {
+        background: url('#{$icon-url}/icon-check.png') 94% 50% no-repeat #f4f9f3;
+        background-size: 12px 9px;
+    }
+    .form-tooltip {
+        background-color: #5fad56;
+        &:before {
+            border-right-color: #5fad56;
+        }
+    }
+}
+
+
+
+// Tooltip
+
+.form-tooltip {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    margin-top: rem(-10);
+    font-size: rem(13);
+    color: #ffffff;
+    border-radius: 4px;
+    margin-left: rem(10);
+    white-space: nowrap;
+    display: none;
+    box-shadow: 0 0 20px rgba(#231f20, 0.25);
+    &:before {
+        content: '';
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        border-right: 5px solid transparent;
+        position: absolute;
+        top: 50%;
+        left: rem(-5);
+        margin-top: rem(-2);
+    }
+    @include breakpoint(sm) {
+        display: block;
+    }
+}
+
+.form-tooltip-inner {
+    max-width: rem(200);
+    padding: rem(8 16);
+}
+
+
+
+// Input group
+
+.input-group {
+	position: relative;
+	display: table;
+	border-collapse: separate;
+	input.form-control {
+		position: relative;
+		z-index: 2;
+		float: left;
+		width: 100%;
+		margin-bottom: 0;
+		&:focus {
+			z-index: 4;
+		}
+		&:first-child {
+			margin-right: rem(-1);
+			@include border-right-radius(0);
+		}
+  	}
+  	.select-form {
+  		display: inline-block;
+  		vertical-align: middle;
+  	}
+  	select.form-control {
+  		width: rem(133);
+  		font-size: rem(14);
+  		background-color: #f4f4f4;
+  		display: inline-block;
+  		vertical-align: middle;
+  	}
+}
+
+.input-group .form-control, .input-group-btn {
+  	display: table-cell;
+}
+
+.input-group-btn {
+	position: relative;
+	font-size: 0;
+  	width: 1%;
+  	white-space: nowrap;
+  	vertical-align: middle;
+  	z-index: 3;
+  	&:last-child {
+  		.form-control {
+  			@include border-left-radius(0);
+  		}
+  		.btn {
+  			@include border-left-radius(0);
+  		}
+  	}
+  	@include breakpoint(sm) {
+  		.btn {
+  			min-width: rem(100);
+  		}
+  	}
+}
+
+
+
+// Select
+
+
+.select-form, .select-filter {
+    position: relative;
+    &:before {
+        content: "\f107";
+        font-family: $font-awesome;
+        position: absolute;
+        color: #7f7f7f;
+        font-size: rem(16);
+        top: 50%;
+        margin-top: rem(-12);
+        right: rem($padding-base-horizontal);
+        font-weight: bold;
+    }
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 0.01px;
+        text-overflow: '';
+        margin-bottom: 0;
+        padding-right: rem(15);
+        color: $input-color-placeholder;
+    }
+}
+
+.select-filter {
+    box-shadow: 0 2px 4px rgba(#000000, 0.04);
+    text-align: left;
+    &:before {
+        content: '';
+        font-size: 0;
+        text-indent: -9999px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #868ca0;
+        display: block;
+        margin-top: rem(-2);
+    }
+    .form-control {
+        color: #868ca0;
+    }
+}
+
+
+.filter-select {
+    position: relative;
+    @include breakpoint(sm) {
+        min-width: rem(254);
+    }
+}
+
+
+
+
+// Signup Forms
+
+.signup-form {
+    max-width: rem(288);
+    margin: 0 auto;
+}

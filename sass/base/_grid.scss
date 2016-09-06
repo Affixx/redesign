@@ -1,0 +1,54 @@
+//---------------------------------------------------------//
+// Grid
+//---------------------------------------------------------// 
+
+
+.col-xlg-1, .col-xlg-2, .col-xlg-3, .col-xlg-4, .col-xlg-5, .col-xlg-6, .col-xlg-7, .col-xlg-8, .col-xlg-9, .col-xlg-10, .col-xlg-11, .col-xlg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: $grid-gutter-width / 2;
+    padding-left: $grid-gutter-width / 2;
+}
+
+
+@include breakpoint(xlg) {
+    .col-xlg-1, .col-xlg-2, .col-xlg-3, .col-xlg-4, .col-xlg-5, .col-xlg-6, .col-xlg-7, .col-xlg-8, .col-xlg-9, .col-xlg-10, .col-xlg-11, .col-xlg-12 {
+        float: left;
+      }
+      .col-xlg-12 {
+        width: 100%;
+      }
+      .col-xlg-11 {
+        width: 91.66666667%;
+      }
+      .col-xlg-10 {
+        width: 83.33333333%;
+      }
+      .col-xlg-9 {
+        width: 75%;
+      }
+      .col-xlg-8 {
+        width: 66.66666667%;
+      }
+      .col-xlg-7 {
+        width: 58.33333333%;
+      }
+      .col-xlg-6 {
+        width: 50%;
+      }
+      .col-xlg-5 {
+        width: 41.66666667%;
+      }
+      .col-xlg-4 {
+        width: 33.33333333%;
+      }
+      .col-xlg-3 {
+        width: 25%;
+      }
+      .col-xlg-2 {
+        width: 16.66666667%;
+      }
+      .col-xlg-1 {
+        width: 8.33333333%;
+      }
+}
