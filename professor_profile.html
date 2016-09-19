@@ -77,7 +77,9 @@
 						</div>
 						<h2>Prof. Charles Xavier</h2>
 						<ul class="nav profile-desc-menu">
-							<li><a href="#"><span class="icon-image icon-image-building-blue-sm"></span>UCLA</a></li>
+							<li><a href="#"><span class="icon-image icon-image-building-blue"></span>UCLA</a></li>
+							<li><a href="#"><span class="icon-image icon-image-bio"></span>Biochemistry</a></li>
+							<li><a href="#"><span class="icon-image icon-image-faculty-art"></span>Faculty of Arts</a></li>
 						</ul>
 					</div>
 				</div>
@@ -564,7 +566,7 @@
 								</div>
 								<div class="col-sm-6 col-md-4 col-lg-3">
 									<div class="panel-blank">
-										<p><a href="#" class="add-btn"></a></p>
+										<p><a href="#add-course" class="add-btn popup-btn"></a></p>
 										<br>
 										<p>Add  Course</p>
 									</div>
@@ -601,6 +603,39 @@
 				</div>
 			</div>
 		</footer>
+		<div id="add-course" class="zoom-anim-dialog mfp-hide popup">
+			<div class="popup-content">
+				<div class="panel panel-primary">
+					<div class="panel-top">
+						<div class="logo-icon">
+							<span class="icon-image icon-image-add-course"></span>
+						</div>
+						<h1>Upload Course</h1>
+					</div>
+					<div class="panel-body">
+						<div class="add-course-form">
+							<form>
+								<div class="form-group">
+									<label>course name<span class="req">*</span></label>
+									<input type="text" class="form-control" placeholder="e.g. Strategic Innovation Management">
+								</div>
+								<div class="form-group">
+									<label>course code<span class="req">*</span></label>
+									<input type="password" class="form-control" placeholder="•••••••••••••">
+								</div>
+								<div class="form-group">
+									<label>description (optional)</label>
+									<textarea class="form-control" rows="4" placeholder="Describe your course in a few words"></textarea>
+								</div>
+								<div class="form-btn">
+									<button type="submit" class="btn btn-primary btn-block">upload course <span class="fa fa-long-arrow-right icon-right"></span></button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="menu-backdrop"></div>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="build/javascripts/main.js"></script>

@@ -59,9 +59,11 @@
 			padding: rem(10 10);
 			&:hover, &:focus {
 				text-decoration: none;
-				color: $brand-primary;
 				//opacity: 0.5;
 			}
+		}
+		li.active a, a:hover {
+			color: $brand-primary;
 		}
 		@include breakpoint(sm) {
 			position: absolute;

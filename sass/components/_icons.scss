@@ -98,7 +98,10 @@
 }
 
 
-
+.icon-image-upload-heading {
+	background: url('#{$icon-url}/icon-upload.png') 0 0 no-repeat;
+	@include background-retina(26, 23);
+}
 .icon-image-upload {
 	background: url('#{$icon-url}/icon-upload-black.png') 0 0 no-repeat;
 	@include background-retina(24, 21);
@@ -166,6 +169,12 @@
 .icon-image-building {
 	background: url('#{$icon-url}/icon-building.png') 0 0 no-repeat;
 	@include background-retina(24, 25);
+}
+.icon-image-building-blue {
+	background: url('#{$icon-url}/icon-building-blue.png') 0 0 no-repeat;
+	@include background-retina(24, 24);
+	position: relative;
+	top: rem(-3);
 }
 .icon-image-building-blue-sm {
 	background: url('#{$icon-url}/icon-building-blue.png') 0 0 no-repeat;
@@ -346,4 +355,33 @@
 .icon-image-drop {
 	background: url('#{$img-url}/drop.png') 0 0 no-repeat;
 	@include background-retina(63, 63);
+}
+
+
+
+
+.icon-image-bio {
+	background: url('#{$icon-url}/icon-bio.png') 0 0 no-repeat;
+	@include background-retina(24, 24);
+	position: relative;
+	top: rem(-1);
+}
+
+.icon-image-faculty-art {
+	background: url('#{$icon-url}/icon-faculty-arts.png') 0 0 no-repeat;
+	@include background-retina(24, 24);
+	position: relative;
+	top: rem(-1);
+}
+
+.icon-image-add-course {
+	background: url('#{$icon-url}/icon-add-course.png') 0 0 no-repeat;
+	@include background-retina(30, 30);
+}
+
+.icon-image-login {
+	background: url('#{$icon-url}/icon-login.png') 0 0 no-repeat;
+	@include background-retina(52, 53);
+	position: relative;
+	top: rem(6);
 }

@@ -20,6 +20,7 @@ label {
     font-size: rem(12);
     text-transform: uppercase;
     font-weight: normal;
+    color: #231f20;
 }
 
 
@@ -37,6 +38,19 @@ label {
 .form-btn {
     @include clearfix();
     padding-top: rem(7);
+}
+
+
+
+textarea {
+    &.form-control {
+        border-radius: 15px;
+    }
+}
+
+
+.req {
+    color: #ff0012;
 }
 
 
@@ -229,7 +243,15 @@ label {
 
 // Signup Forms
 
-.signup-form {
+.signup-form, .add-course-form {
     max-width: rem(288);
     margin: 0 auto;
+}
+
+
+
+.form-content {
+    max-width: rem(410);
+    margin: 0px auto;
+    box-shadow: 0 0 80px rgba(#231f20, 0.15);
 }

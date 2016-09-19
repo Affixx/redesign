@@ -1,0 +1,87 @@
+//---------------------------------------------------------//
+// Comments
+//---------------------------------------------------------// 
+
+
+.comment-box {
+	background-color: #ffffff;
+	padding: rem(30 20);
+	margin-bottom: rem(60);
+	label {
+		color: #868686;
+		padding-left: 0;
+		font-size: rem(14);
+		text-transform: none;
+	}
+	.form-group {
+		margin-bottom: rem(30);
+	}
+	.has-error {
+		.form-control {
+			background: none;
+			background-color: #ffffff;
+		}
+	}
+	textarea {
+		&.form-control {
+			border-radius: 0;
+		}
+	}
+	@include breakpoint(sm) {
+		padding: rem(30 35);
+	}
+}
+
+
+.comment-block {
+	border-top: 1px solid #d2d2d2;
+	padding: rem(30 20 30 0);
+	@include breakpoint(sm) {
+		padding-left: rem(20)
+	}
+}
+
+.comment-pic {
+	width: rem(47);
+	height: rem(47);
+	border-radius: 50%;
+	overflow: hidden;
+	display: block;
+	margin-bottom: rem(20);
+	img {
+		width: 100%;
+		display: block;
+	}
+	@include breakpoint(sm) {
+		float: left;
+		margin-right: rem(23);
+	}
+}
+
+.comment-post {
+	overflow: hidden;
+	display: block;
+	h4 {
+		font-size: rem(16);
+		font-weight: bold;
+		margin-bottom: rem(15);
+	}
+	.meta {
+		font-size: rem(12);
+		span {
+			margin-right: rem(30);
+		}
+	}
+}
+
+
+
+.comment-block-reply {
+	padding-left: rem(70);
+	.comment-block {
+		padding-left: 0;
+	}
+	@include breakpoint(sm) {
+		padding-left: rem(90);
+	}
+}
